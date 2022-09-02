@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="saleItem"
+            type="com.yellow.igibilling.database.SaleItem" />
+
+        <variable
+            name="clickListener"
+            type="com.yellow.igibilling.NewBillPageAdaptor.NewBillPageListener" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_margin="5dp"
+        android:onClick="@{() -> clickListener.onClick(saleItem)}">
+
+        <TextView
+            android:id="@+id/item_name"
+            android:layout_height="wrap_content"
+            android:layout_width="80sp"
+            app:itemNameString="@{saleItem}" />
+
+        <TextView
+            android:id="@+id/item_quantity"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            app:itemQuantityString="@{saleItem}" />
+
+        <TextView
+            android:id="@+id/item_rate"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            app:itemRateString="@{saleItem}" />
+
+        <TextView
+            android:id="@+id/item_total"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            app:itemTotalString="@{saleItem}" />
+    </LinearLayout>
+</layout>
+

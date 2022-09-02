@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/startPageFragment">
+
+    <fragment
+        android:id="@+id/startPageFragment"
+        android:name="com.yellow.igibilling.StartPageFragment"
+        android:label="StartPageFragment"
+        tools:layout="@layout/start_page">
+        <action
+            android:id="@+id/action_startPageFragment_to_newBillPageFragment"
+            app:destination="@id/newBillPageFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/newBillPageFragment"
+        android:name="com.yellow.igibilling.NewBillPageFragment"
+        android:label="NewBillPageFragment"
+        tools:layout="@layout/new_bill_page">
+        <action
+            android:id="@+id/action_newBillPageFragment_to_showBillPageFragment"
+            app:destination="@id/showBillPageFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/showBillPageFragment"
+        android:name="com.yellow.igibilling.ShowBillPageFragment"
+        android:label="ShowBillPageFragment"
+        tools:layout="@layout/show_bill_page"/>
+</navigation>

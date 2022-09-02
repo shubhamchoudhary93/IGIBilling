@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <EditText
+                android:id="@+id/party_name_input_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Party Name" />
+
+            <EditText
+                android:id="@+id/date_input_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="01/01/2022"
+                android:inputType="date" />
+
+            <include
+                android:id="@+id/add_item_layout"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                layout="@layout/new_bill_add_item_page"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/sale_item_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <EditText
+                android:id="@+id/tax_input_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Tax"
+                android:inputType="number" />
+
+            <EditText
+                android:id="@+id/transport_input_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Transport"
+                android:inputType="number" />
+
+            <EditText
+                android:id="@+id/other_name_input_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Other" />
+
+            <EditText
+                android:id="@+id/other_value_input_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Other's Value"
+                android:inputType="number" />
+
+            <Button
+                android:id="@+id/add_sale_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="add sale" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/output"/>
+        </LinearLayout>
+    </ScrollView>
+</layout>
